@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonStyle from './Button.module.scss'
 
 // class Botao extends React.Component {
 //     render(): React.ReactNode {
@@ -13,6 +14,6 @@ import React from "react";
 
 export const Botao = () => {
   return (
-    <button>Botão</button>
+    <button className={ButtonStyle.botao}>Botão</button>
   )
 }

@@ -1,9 +1,10 @@
 import { Botao } from "../Button/Button"
+import FormularioStyle from './Formulario.module.scss'
 
 export const Formulario = () => {
   return(
-    <form>
-        <div>
+    <form className="novaTarefa">
+        <div className={FormularioStyle.inputContainer}>
             <label htmlFor="tarefa">
                 Adicione um novo estudo
             </label>
@@ -15,7 +16,7 @@ export const Formulario = () => {
                 required
             />
         </div>
-        <div>
+        <div className={FormularioStyle.inputContainer}>
             <label htmlFor="tempo">
                 Tempo
             </label>
