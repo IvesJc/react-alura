@@ -3,7 +3,7 @@ import FormularioStyle from './Formulario.module.scss'
 
 export const Formulario = () => {
   return(
-    <form className="novaTarefa">
+    <form className={FormularioStyle.novaTarefa}>
         <div className={FormularioStyle.inputContainer}>
             <label htmlFor="tarefa">
                 Adicione um novo estudo
@@ -30,7 +30,9 @@ export const Formulario = () => {
                 required
             />
         </div>
-        <Botao />
+        <Botao 
+            texto="Adicionar"
+        />
     </form>
   )
 }

@@ -1,3 +1,4 @@
+import Item from './Item/item'
 import ListaStyle from './Lista.module.scss'
 
 export const Lista = () => {
@@ -18,10 +19,12 @@ export const Lista = () => {
         <h2>Estudos do dia</h2>
         <ul>
             {tarefas.map((item, index) => (
-                <li key={index} className={ListaStyle.item}>
-                    <h3>{item.tarefa}</h3>
-                    <span>{item.tempo}</span>
-                </li>
+                <Item 
+                    key={index}
+                    {...item}
+                    // tarefa={item.tarefa}
+                    // tempo={item.tempo}
+                />
             ))}
         </ul>
     </aside>

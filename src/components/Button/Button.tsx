@@ -12,8 +12,14 @@ import ButtonStyle from './Button.module.scss'
 
 // export default Botao;
 
-export const Botao = () => {
+interface ButtonProps{
+  texto: string
+}
+
+export const Botao = ({texto}: ButtonProps) => {
   return (
-    <button className={ButtonStyle.botao}>Botão</button>
+    <button className={ButtonStyle.botao}>
+      {texto}
+      </button>
   )
 }
