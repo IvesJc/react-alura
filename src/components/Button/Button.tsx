@@ -13,13 +13,15 @@ import ButtonStyle from './Button.module.scss'
 // export default Botao;
 
 interface ButtonProps{
-  texto: string
+  children: React.ReactNode,
+  type?: "button" | "submit" | "reset" | undefined
 }
 
-export const Botao = ({texto}: ButtonProps) => {
+export const Button = ({children, type}: ButtonProps) => {
+  // const { type = "button" } = this.props;
   return (
-    <button className={ButtonStyle.botao}>
-      {texto}
+    <button type={type = "button"} className={ButtonStyle.botao}>
+      {children}
       </button>
   )
 }

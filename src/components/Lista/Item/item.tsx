@@ -1,7 +1,11 @@
 import ListaStyle from '../Lista.module.scss'
 
-export default function Item({tarefa, tempo}: {tarefa: string, tempo: string}){
+interface ItemListaProps{
+    tarefa: string,
+    tempo: string
+}
 
+export const Item = ({tarefa, tempo}: ItemListaProps) => {
     return (
         <li className={ListaStyle.item}>
             <h3>{tarefa}</h3>
