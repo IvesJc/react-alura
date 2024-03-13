@@ -2,18 +2,21 @@ import { useState } from 'react'
 import { Item } from './Item/item'
 import ListaStyle from './Lista.module.scss'
 
-interface ITarefa {
+export interface ITarefa {
     tarefa: string,
     tempo: string
 }
+interface ListaProps{
+    tarefas: ITarefa[]
+}
 
-export const Lista = ({ tarefa }: ITarefa[]) => {
+export const Lista = ({ tarefas }: ListaProps) => {
 
   return(
     <aside className={ListaStyle.listaTarefas}>
         <h2>Estudos do dia</h2>
         <ul>
-            {tarefa.map((item, index) => (
+            {tarefas.map((item, index) => (
                 <Item 
                     key={index}
                     {...item}

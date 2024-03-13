@@ -1,8 +1,13 @@
 import React, { SetStateAction, useState } from "react"
 import { Button } from "../Button/Button"
 import FormularioStyle from './Formulario.module.scss'
+import { ITarefa } from "../Lista/Lista"
 
-export const Formulario = () => {
+interface FormularioProps {
+    setTarefas: (tarefas: ITarefa[]) => void
+}
+
+export const Formulario = ({setTarefas}: FormularioProps) => {
 
     const [tarefa, setTarefa] = useState<string>("");
     const [tempo, setTempo] = useState<string>("00:00");
